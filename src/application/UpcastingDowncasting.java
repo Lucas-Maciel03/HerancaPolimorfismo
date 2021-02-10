@@ -11,13 +11,11 @@ public class UpcastingDowncasting {
 		BusinessAccount bacc = new BusinessAccount(02, "Lorena", 0.0, 300.0);
 		
 		//Upcasting
-		
 		Account acc1 = bacc;
 		Account acc2 = new BusinessAccount(03, "Jose", 100.0, 500.0);
 		Account acc3 = new SavingsAccount(04, "Bruno", 50.0, 20.0);
 		
 		//Downcasting
-		
 		BusinessAccount acc4 = (BusinessAccount)acc2;
 		acc4.loan(10.0);
 		//BusinessAccount acc5 = (BusinessAccount)acc3;
