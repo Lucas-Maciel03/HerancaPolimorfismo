@@ -7,8 +7,8 @@ public class AbsIndividual extends TaxPayer {
 		super();
 	}
 
-	public AbsIndividual(String name, Double annualncome, Double healthExpenditures) {
-		super(name, annualncome);
+	public AbsIndividual(String name, Double anualIncome, Double healthExpenditures) {
+		super(name, anualIncome);
 		this.healthExpenditures = healthExpenditures;
 	}
 
@@ -22,7 +22,11 @@ public class AbsIndividual extends TaxPayer {
 
 	@Override
 	public double tax() {
-		return (getAnnualncome() * 0.25) - (healthExpenditures * 0.50);
+		if (getAnualIncome() < 20000.0) {
+			return getAnualIncome() * 0.15 - healthExpenditures * 0.5;
+		} else {
+			return getAnualIncome() * 0.25 - healthExpenditures * 0.5;
+		}
 	}
 
 }

@@ -1,14 +1,14 @@
 package entities;
 
-public class AbsCompany extends TaxPayer{
+public class AbsCompany extends TaxPayer {
 	private int numberOfEmployees;
-	
+
 	public AbsCompany() {
 		super();
 	}
 
-	public AbsCompany(String name, Double annualncome, int numberOfEmployees) {
-		super(name, annualncome);
+	public AbsCompany(String name, Double anualIncome, int numberOfEmployees) {
+		super(name, anualIncome);
 		this.numberOfEmployees = numberOfEmployees;
 	}
 
@@ -22,12 +22,11 @@ public class AbsCompany extends TaxPayer{
 
 	@Override
 	public double tax() {
-		if(numberOfEmployees>10) {
-			return getAnnualncome() * 0.14;
-		}
-		else {
-			return getAnnualncome() * 0.16;
+		if (numberOfEmployees > 10) {
+			return getAnualIncome() * 0.14;
+		} else {
+			return getAnualIncome() * 0.16;
 		}
 	}
-	
+
 }
