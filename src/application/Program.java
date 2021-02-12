@@ -7,9 +7,9 @@ import entities.SavingsAccount;
 public class Program {
 
 	public static void main(String[] args) {
-		Account acc = new Account(01, "Ronaldo", 200.0);
+		/*Account acc = new Account(01, "Ronaldo", 200.0);
 		acc.withdraw(45.0);
-		System.out.println(acc.getBalance());
+		System.out.println(acc.getBalance());*/
 		
 		Account acc1 = new SavingsAccount(02, "Lory", 100.0, 40.0);
 		acc1.withdraw(12.0);
@@ -21,7 +21,7 @@ public class Program {
 		
 		//polimorfismo
 		
-		Account x = new Account(1020, "Alex", 1000.0);
+		Account x = new BusinessAccount(1020, "Alex", 1000.0, 0.01);
 		Account y = new SavingsAccount(1023, "Maria", 1000.0, 0.01);
 		
 		x.withdraw(50.0);

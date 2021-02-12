@@ -7,7 +7,7 @@ import entities.SavingsAccount;
 public class UpcastingDowncasting {
 
 	public static void main(String[] args) {
-		Account acc = new Account(01, "Lucas", 10.0);
+		//Account acc = new Account(01, "Lucas", 10.0);
 		BusinessAccount bacc = new BusinessAccount(02, "Lorena", 0.0, 300.0);
 		
 		//Upcasting
